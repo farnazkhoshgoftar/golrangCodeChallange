@@ -6,6 +6,15 @@
 
 }
 
+.selectBox select{
+    border: 1px solid gray;
+    padding: 10px;
+    background-color:lightgray;
+    font-size: 16px;
+}
+.selectBox select:focus {
+    border:1px solid #FFE300;
+  }
 @media (min-width:768px) {
     .selectBox {
         width: calc(50%);

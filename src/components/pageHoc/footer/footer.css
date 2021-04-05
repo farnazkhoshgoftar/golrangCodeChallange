@@ -1,0 +1,14 @@
+.footer {
+    width: calc(100% - 30px);
+    background-color: #333;
+    color: #FFE300;
+    padding:15px;
+    border-top: 5px solid #FFE300;
+}
+
+
+
+.footer p {
+    color: #FFE300;
+    font-size: 22px;
+}

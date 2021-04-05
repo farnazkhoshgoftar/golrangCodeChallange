@@ -1,12 +1,10 @@
 import React from "react";
 
-import './selectBox.css'
+import "./selectBox.css";
 
 const SelectBox = ({ parentCallback, peoples }) => {
-
   const filterPeoples = (e) => {
     let userName = e.target.value;
-    console.log(userName);
     const selected = peoples.filter((people) => people.name === userName);
 
     if (userName === "select people") {
@@ -17,7 +15,7 @@ const SelectBox = ({ parentCallback, peoples }) => {
   };
 
   return (
-    <div className='selectBox'>
+    <div className="selectBox">
       <select onChange={filterPeoples}>
         <option>select people</option>
         {peoples.map((people) => (

@@ -10,7 +10,7 @@ import "./home.css";
 
 const Home = () => {
   const initialpeoples = useSelector((state) => state.peoples);
-  const [peoples, setPeoples] = useState(null);
+  const [peoples, setPeoples] = useState([]);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -44,8 +44,11 @@ const Home = () => {
         </div>
 
         <div className="flex">
-          {peoples &&
-            peoples.map((people) => <Card key={people.id} {...people} />)}
+          {peoples.length !== 0 ? (
+            peoples.map((people) => <Card key={people.id} {...people} />)
+          ) : (
+            <p className='message'>there are no results</p>
+          )}
         </div>
       </div>
     </PageHOC>

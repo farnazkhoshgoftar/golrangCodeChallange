@@ -7,7 +7,7 @@ const SelectBox = ({ parentCallback, peoples }) => {
     let userName = e.target.value;
     const selected = peoples.filter((people) => people.name === userName);
 
-    if (userName === "select people") {
+    if (userName === "All People") {
       parentCallback(peoples);
     } else {
       parentCallback(selected);
@@ -17,7 +17,7 @@ const SelectBox = ({ parentCallback, peoples }) => {
   return (
     <div className="selectBox">
       <select onChange={filterPeoples}>
-        <option>select people</option>
+        <option>All People</option>
         {peoples.map((people) => (
           <option key={people.id} value={people.name}>
             {people.name}

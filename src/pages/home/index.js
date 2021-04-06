@@ -31,25 +31,19 @@ const Home = () => {
 
   return (
     <PageHOC>
-      <div className="container">
-        <div className="flex boxes">
-          <SelectBox
-            peoples={initialpeoples}
-            parentCallback={selectCallbackFunction}
-          />
-          <SearchBox
-            peoples={peoples}
-            parentCallback={searchCallbackFunction}
-          />
-        </div>
-
-        <div className="flex">
-          {peoples.length !== 0 ? (
-            peoples.map((people) => <Card key={people.id} {...people} />)
-          ) : (
-            <p className='message'>there are no results</p>
-          )}
-        </div>
+      <div className='flex'>
+      <SelectBox
+        peoples={initialpeoples}
+        parentCallback={selectCallbackFunction}
+      />
+      <SearchBox peoples={peoples} parentCallback={searchCallbackFunction} />
+      </div>
+      <div className="flex">
+        {peoples.length !== 0 ? (
+          peoples.map((people) => <Card key={people.id} {...people} />)
+        ) : (
+          <p className="message">there are no results</p>
+        )}
       </div>
     </PageHOC>
   );

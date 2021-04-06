@@ -13,7 +13,8 @@
 }
 
 .card h1 {
-    font-size: 20px;
+    font-size: 18px;
+    white-space: nowrap;
 }
 
 .card span {
@@ -24,18 +25,18 @@
 
 @media (max-width:768px) {
     .card {
-        width: calc(100%);
+        width:100%;
     }
 }
 
 @media (min-width:768px) and (max-width:992px) {
     .card {
-        width: calc(33.33333333333333%);
+        width: 33.33333333333333%;
     }
 }
 
 @media (min-width:1200px) {
     .card {
-        width: calc(25%);
+        width:25%;
     }
 }

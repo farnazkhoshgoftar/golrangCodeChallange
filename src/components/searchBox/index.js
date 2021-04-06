@@ -10,7 +10,10 @@ const SearchBox = ({ parentCallback, peoples }) => {
 
   const search = () => {
     const searchResult = peoples.filter((people) =>
-      people.name.toLowerCase().includes(searchTerm.toLowerCase())
+      people.name.toLowerCase().includes(searchTerm.toLowerCase())||
+      people.username.toLowerCase().includes(searchTerm.toLowerCase())||
+      people.email.toLowerCase().includes(searchTerm.toLowerCase())||
+      people.phone.toLowerCase().includes(searchTerm.toLowerCase())
     );
     parentCallback(searchResult);
   };
@@ -20,7 +23,7 @@ const SearchBox = ({ parentCallback, peoples }) => {
         type="text"
         value={searchTerm}
         onChange={editSearchTerm}
-        placeholder="Search for a name!"
+        placeholder="Search!"
       />
       <button onClick={search}>search</button>
     </div>
